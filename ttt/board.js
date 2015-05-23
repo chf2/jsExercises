@@ -25,6 +25,10 @@ function Board () {
     return this.grid[pos[0]][pos[1]] === "o";
   };
 
+  this.tied = function () {
+    
+  }
+
   this.placeMark = function(pos, mark) {
     if (this.empty(pos)) {
       this.grid[pos[0]][pos[1]] = mark;

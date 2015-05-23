@@ -16,6 +16,9 @@ function Game(reader, completionCallback) {
         if (gameBoard.winningPlayer()) {
           console.log("You won!");
           completionCallback();
+        } else if (gameBoard.tied()){
+          console.log("It's a tie!");
+          completionCallback();
         } else {
           game.takeComputerTurn();
         }
